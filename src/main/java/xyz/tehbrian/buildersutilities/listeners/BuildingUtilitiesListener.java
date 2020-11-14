@@ -1,6 +1,10 @@
 package xyz.tehbrian.buildersutilities.listeners;
 
-import org.bukkit.*;
+import com.cryptomorin.xseries.XMaterial;
+import org.bukkit.Bukkit;
+import org.bukkit.GameMode;
+import org.bukkit.Location;
+import org.bukkit.Tag;
 import org.bukkit.block.Block;
 import org.bukkit.block.BlockFace;
 import org.bukkit.block.data.Directional;
@@ -38,8 +42,9 @@ public class BuildingUtilitiesListener implements Listener {
 
         if (!main.getPlayerDataManager().getPlayerData(player).hasIronTrapdoorToggleEnabled()) return;
 
-        if (Objects.requireNonNull(event.getClickedBlock()).getType() != Material.IRON_TRAPDOOR) return;
-        if (player.getInventory().getItemInMainHand().getType() != Material.AIR) return;
+        if (Objects.requireNonNull(event.getClickedBlock()).getType() != XMaterial.IRON_TRAPDOOR.parseMaterial())
+            return;
+        if (player.getInventory().getItemInMainHand().getType() != XMaterial.AIR.parseMaterial()) return;
         if (event.getAction() != Action.RIGHT_CLICK_BLOCK) return;
         if (event.getHand() != EquipmentSlot.HAND) return;
         if (player.getGameMode() != GameMode.CREATIVE) return;
@@ -87,7 +92,7 @@ public class BuildingUtilitiesListener implements Listener {
         if (!main.getPlayerDataManager().getPlayerData(player).hasGlazedTerracottaRotateEnabled()) return;
 
         if (!Objects.requireNonNull(event.getClickedBlock()).getType().name().toLowerCase().contains("glazed")) return;
-        if (player.getInventory().getItemInMainHand().getType() != Material.AIR) return;
+        if (player.getInventory().getItemInMainHand().getType() != XMaterial.AIR.parseMaterial()) return;
         if (event.getAction() != Action.RIGHT_CLICK_BLOCK) return;
         if (event.getHand() != EquipmentSlot.HAND) return;
         if (player.getGameMode() != GameMode.CREATIVE) return;

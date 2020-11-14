@@ -1,5 +1,6 @@
 package xyz.tehbrian.buildersutilities.util;
 
+import com.cryptomorin.xseries.XMaterial;
 import com.mojang.authlib.GameProfile;
 import com.mojang.authlib.properties.Property;
 import org.bukkit.Color;
@@ -47,7 +48,7 @@ public class ItemUtils {
     }
 
     public static ItemStack createHead(String data, int amount, String name, List<String> lore) {
-        ItemStack itemStack = create(Material.PLAYER_HEAD, amount, name, lore);
+        ItemStack itemStack = create(XMaterial.PLAYER_HEAD.parseMaterial(), amount, name, lore);
         SkullMeta itemMeta = (SkullMeta) itemStack.getItemMeta();
 
         GameProfile profile = new GameProfile(UUID.randomUUID(), null);

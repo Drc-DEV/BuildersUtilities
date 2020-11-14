@@ -1,5 +1,6 @@
 package xyz.tehbrian.buildersutilities.inventories;
 
+import com.cryptomorin.xseries.XMaterial;
 import org.bukkit.Bukkit;
 import org.bukkit.DyeColor;
 import org.bukkit.Material;
@@ -31,29 +32,29 @@ public class BannerInventory {
         Inventory inv = Bukkit.createInventory(null, 54, MessageUtils.getMessage("messages.inventories.banner.base_inventory_name"));
 
         for (int x = 0; x < inv.getSize(); x++) {
-            inv.setItem(x, ItemUtils.create(Material.LIGHT_GRAY_STAINED_GLASS_PANE, 1, "&7"));
+            inv.setItem(x, ItemUtils.create(XMaterial.LIGHT_GRAY_STAINED_GLASS_PANE.parseMaterial(), 1, "&7"));
         }
 
         inv.setItem(12, ItemUtils.createHead(MessageUtils.getMessage("heads.banner.randomize"), 1, MessageUtils.getMessage("messages.inventories.banner.randomize")));
-        inv.setItem(14, ItemUtils.create(Material.BARRIER, 1, MessageUtils.getMessage("messages.inventories.banner.cannot_get_banner")));
+        inv.setItem(14, ItemUtils.create(XMaterial.BARRIER.parseMaterial(), 1, MessageUtils.getMessage("messages.inventories.banner.cannot_get_banner")));
 
-        inv.setItem(28, ItemUtils.create(Material.BLACK_BANNER, 1, MessageUtils.getMessageList("messages.inventories.banner.select")));
-        inv.setItem(29, ItemUtils.create(Material.RED_BANNER, 1, MessageUtils.getMessageList("messages.inventories.banner.select")));
-        inv.setItem(30, ItemUtils.create(Material.GREEN_BANNER, 1, MessageUtils.getMessageList("messages.inventories.banner.select")));
-        inv.setItem(31, ItemUtils.create(Material.BROWN_BANNER, 1, MessageUtils.getMessageList("messages.inventories.banner.select")));
-        inv.setItem(32, ItemUtils.create(Material.BLUE_BANNER, 1, MessageUtils.getMessageList("messages.inventories.banner.select")));
-        inv.setItem(33, ItemUtils.create(Material.PURPLE_BANNER, 1, MessageUtils.getMessageList("messages.inventories.banner.select")));
-        inv.setItem(34, ItemUtils.create(Material.CYAN_BANNER, 1, MessageUtils.getMessageList("messages.inventories.banner.select")));
-        inv.setItem(35, ItemUtils.create(Material.LIGHT_GRAY_BANNER, 1, MessageUtils.getMessageList("messages.inventories.banner.select")));
+        inv.setItem(28, ItemUtils.create(XMaterial.BLACK_BANNER.parseMaterial(), 1, MessageUtils.getMessageList("messages.inventories.banner.select")));
+        inv.setItem(29, ItemUtils.create(XMaterial.RED_BANNER.parseMaterial(), 1, MessageUtils.getMessageList("messages.inventories.banner.select")));
+        inv.setItem(30, ItemUtils.create(XMaterial.GREEN_BANNER.parseMaterial(), 1, MessageUtils.getMessageList("messages.inventories.banner.select")));
+        inv.setItem(31, ItemUtils.create(XMaterial.BROWN_BANNER.parseMaterial(), 1, MessageUtils.getMessageList("messages.inventories.banner.select")));
+        inv.setItem(32, ItemUtils.create(XMaterial.BLUE_BANNER.parseMaterial(), 1, MessageUtils.getMessageList("messages.inventories.banner.select")));
+        inv.setItem(33, ItemUtils.create(XMaterial.PURPLE_BANNER.parseMaterial(), 1, MessageUtils.getMessageList("messages.inventories.banner.select")));
+        inv.setItem(34, ItemUtils.create(XMaterial.CYAN_BANNER.parseMaterial(), 1, MessageUtils.getMessageList("messages.inventories.banner.select")));
+        inv.setItem(35, ItemUtils.create(XMaterial.LIGHT_GRAY_BANNER.parseMaterial(), 1, MessageUtils.getMessageList("messages.inventories.banner.select")));
 
-        inv.setItem(37, ItemUtils.create(Material.GRAY_BANNER, 1, MessageUtils.getMessageList("messages.inventories.banner.select")));
-        inv.setItem(38, ItemUtils.create(Material.PINK_BANNER, 1, MessageUtils.getMessageList("messages.inventories.banner.select")));
-        inv.setItem(39, ItemUtils.create(Material.LIME_BANNER, 1, MessageUtils.getMessageList("messages.inventories.banner.select")));
-        inv.setItem(40, ItemUtils.create(Material.YELLOW_BANNER, 1, MessageUtils.getMessageList("messages.inventories.banner.select")));
-        inv.setItem(41, ItemUtils.create(Material.LIGHT_BLUE_BANNER, 1, MessageUtils.getMessageList("messages.inventories.banner.select")));
-        inv.setItem(42, ItemUtils.create(Material.MAGENTA_BANNER, 1, MessageUtils.getMessageList("messages.inventories.banner.select")));
-        inv.setItem(43, ItemUtils.create(Material.ORANGE_BANNER, 1, MessageUtils.getMessageList("messages.inventories.banner.select")));
-        inv.setItem(44, ItemUtils.create(Material.WHITE_BANNER, 1, MessageUtils.getMessageList("messages.inventories.banner.select")));
+        inv.setItem(37, ItemUtils.create(XMaterial.GRAY_BANNER.parseMaterial(), 1, MessageUtils.getMessageList("messages.inventories.banner.select")));
+        inv.setItem(38, ItemUtils.create(XMaterial.PINK_BANNER.parseMaterial(), 1, MessageUtils.getMessageList("messages.inventories.banner.select")));
+        inv.setItem(39, ItemUtils.create(XMaterial.LIME_BANNER.parseMaterial(), 1, MessageUtils.getMessageList("messages.inventories.banner.select")));
+        inv.setItem(40, ItemUtils.create(XMaterial.YELLOW_BANNER.parseMaterial(), 1, MessageUtils.getMessageList("messages.inventories.banner.select")));
+        inv.setItem(41, ItemUtils.create(XMaterial.LIGHT_BLUE_BANNER.parseMaterial(), 1, MessageUtils.getMessageList("messages.inventories.banner.select")));
+        inv.setItem(42, ItemUtils.create(XMaterial.MAGENTA_BANNER.parseMaterial(), 1, MessageUtils.getMessageList("messages.inventories.banner.select")));
+        inv.setItem(43, ItemUtils.create(XMaterial.ORANGE_BANNER.parseMaterial(), 1, MessageUtils.getMessageList("messages.inventories.banner.select")));
+        inv.setItem(44, ItemUtils.create(XMaterial.WHITE_BANNER.parseMaterial(), 1, MessageUtils.getMessageList("messages.inventories.banner.select")));
 
         return inv;
     }
@@ -62,29 +63,29 @@ public class BannerInventory {
         Inventory inv = Bukkit.createInventory(null, 54, MessageUtils.getMessage("messages.inventories.banner.color_inventory_name"));
 
         for (int x = 0; x < inv.getSize(); x++) {
-            inv.setItem(x, ItemUtils.create(Material.LIGHT_GRAY_STAINED_GLASS_PANE, 1, "&7"));
+            inv.setItem(x, ItemUtils.create(XMaterial.LIGHT_GRAY_STAINED_GLASS_PANE.parseMaterial(), 1, "&7"));
         }
 
         inv.setItem(12, ItemUtils.createHead(MessageUtils.getMessage("heads.banner.randomize"), 1, MessageUtils.getMessage("messages.inventories.banner.randomize")));
         inv.setItem(14, oldBanner);
 
-        inv.setItem(28, ItemUtils.create(Material.BLACK_DYE, 1, MessageUtils.getMessageList("messages.inventories.banner.select")));
-        inv.setItem(29, ItemUtils.create(Material.RED_DYE, 1, MessageUtils.getMessageList("messages.inventories.banner.select")));
-        inv.setItem(30, ItemUtils.create(Material.GREEN_DYE, 1, MessageUtils.getMessageList("messages.inventories.banner.select")));
-        inv.setItem(31, ItemUtils.create(Material.BROWN_DYE, 1, MessageUtils.getMessageList("messages.inventories.banner.select")));
-        inv.setItem(32, ItemUtils.create(Material.BLUE_DYE, 1, MessageUtils.getMessageList("messages.inventories.banner.select")));
-        inv.setItem(33, ItemUtils.create(Material.PURPLE_DYE, 1, MessageUtils.getMessageList("messages.inventories.banner.select")));
-        inv.setItem(34, ItemUtils.create(Material.CYAN_DYE, 1, MessageUtils.getMessageList("messages.inventories.banner.select")));
-        inv.setItem(35, ItemUtils.create(Material.LIGHT_GRAY_DYE, 1, MessageUtils.getMessageList("messages.inventories.banner.select")));
+        inv.setItem(28, ItemUtils.create(XMaterial.BLACK_DYE.parseMaterial(), 1, MessageUtils.getMessageList("messages.inventories.banner.select")));
+        inv.setItem(29, ItemUtils.create(XMaterial.RED_DYE.parseMaterial(), 1, MessageUtils.getMessageList("messages.inventories.banner.select")));
+        inv.setItem(30, ItemUtils.create(XMaterial.GREEN_DYE.parseMaterial(), 1, MessageUtils.getMessageList("messages.inventories.banner.select")));
+        inv.setItem(31, ItemUtils.create(XMaterial.BROWN_DYE.parseMaterial(), 1, MessageUtils.getMessageList("messages.inventories.banner.select")));
+        inv.setItem(32, ItemUtils.create(XMaterial.BLUE_DYE.parseMaterial(), 1, MessageUtils.getMessageList("messages.inventories.banner.select")));
+        inv.setItem(33, ItemUtils.create(XMaterial.PURPLE_DYE.parseMaterial(), 1, MessageUtils.getMessageList("messages.inventories.banner.select")));
+        inv.setItem(34, ItemUtils.create(XMaterial.CYAN_DYE.parseMaterial(), 1, MessageUtils.getMessageList("messages.inventories.banner.select")));
+        inv.setItem(35, ItemUtils.create(XMaterial.LIGHT_GRAY_DYE.parseMaterial(), 1, MessageUtils.getMessageList("messages.inventories.banner.select")));
 
-        inv.setItem(37, ItemUtils.create(Material.GRAY_DYE, 1, MessageUtils.getMessageList("messages.inventories.banner.select")));
-        inv.setItem(38, ItemUtils.create(Material.PINK_DYE, 1, MessageUtils.getMessageList("messages.inventories.banner.select")));
-        inv.setItem(39, ItemUtils.create(Material.LIME_DYE, 1, MessageUtils.getMessageList("messages.inventories.banner.select")));
-        inv.setItem(40, ItemUtils.create(Material.YELLOW_DYE, 1, MessageUtils.getMessageList("messages.inventories.banner.select")));
-        inv.setItem(41, ItemUtils.create(Material.LIGHT_BLUE_DYE, 1, MessageUtils.getMessageList("messages.inventories.banner.select")));
-        inv.setItem(42, ItemUtils.create(Material.MAGENTA_DYE, 1, MessageUtils.getMessageList("messages.inventories.banner.select")));
-        inv.setItem(43, ItemUtils.create(Material.ORANGE_DYE, 1, MessageUtils.getMessageList("messages.inventories.banner.select")));
-        inv.setItem(44, ItemUtils.create(Material.WHITE_DYE, 1, MessageUtils.getMessageList("messages.inventories.banner.select")));
+        inv.setItem(37, ItemUtils.create(XMaterial.GRAY_DYE.parseMaterial(), 1, MessageUtils.getMessageList("messages.inventories.banner.select")));
+        inv.setItem(38, ItemUtils.create(XMaterial.PINK_DYE.parseMaterial(), 1, MessageUtils.getMessageList("messages.inventories.banner.select")));
+        inv.setItem(39, ItemUtils.create(XMaterial.LIME_DYE.parseMaterial(), 1, MessageUtils.getMessageList("messages.inventories.banner.select")));
+        inv.setItem(40, ItemUtils.create(XMaterial.YELLOW_DYE.parseMaterial(), 1, MessageUtils.getMessageList("messages.inventories.banner.select")));
+        inv.setItem(41, ItemUtils.create(XMaterial.LIGHT_BLUE_DYE.parseMaterial(), 1, MessageUtils.getMessageList("messages.inventories.banner.select")));
+        inv.setItem(42, ItemUtils.create(XMaterial.MAGENTA_DYE.parseMaterial(), 1, MessageUtils.getMessageList("messages.inventories.banner.select")));
+        inv.setItem(43, ItemUtils.create(XMaterial.ORANGE_DYE.parseMaterial(), 1, MessageUtils.getMessageList("messages.inventories.banner.select")));
+        inv.setItem(44, ItemUtils.create(XMaterial.WHITE_DYE.parseMaterial(), 1, MessageUtils.getMessageList("messages.inventories.banner.select")));
 
         return inv;
     }
@@ -93,7 +94,7 @@ public class BannerInventory {
         Inventory inv = Bukkit.createInventory(null, 54, MessageUtils.getMessage("messages.inventories.banner.pattern_inventory_name"));
 
         for (int x = 0; x < inv.getSize(); x++) {
-            inv.setItem(x, ItemUtils.create(Material.LIGHT_GRAY_STAINED_GLASS_PANE, 1, "&7"));
+            inv.setItem(x, ItemUtils.create(XMaterial.LIGHT_GRAY_STAINED_GLASS_PANE.parseMaterial(), 1, "&7"));
         }
 
         inv.setItem(3, ItemUtils.createHead(MessageUtils.getMessage("heads.banner.randomize"), 1, MessageUtils.getMessage("messages.inventories.banner.randomize")));
@@ -107,10 +108,10 @@ public class BannerInventory {
             case LIME:
             case LIGHT_BLUE:
             case YELLOW:
-                base = Material.BLACK_BANNER;
+                base = XMaterial.BLACK_BANNER.parseMaterial();
                 break;
             default:
-                base = Material.WHITE_BANNER;
+                base = XMaterial.WHITE_BANNER.parseMaterial();
                 break;
         }
 

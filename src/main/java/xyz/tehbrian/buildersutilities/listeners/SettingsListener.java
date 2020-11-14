@@ -1,6 +1,6 @@
 package xyz.tehbrian.buildersutilities.listeners;
 
-import org.bukkit.Material;
+import com.cryptomorin.xseries.XMaterial;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.block.*;
@@ -80,7 +80,7 @@ public class SettingsListener implements Listener {
     public void onFarmlandTrample(PlayerInteractEvent event) {
         if (main.getConfig().getBoolean("settings.disable_farmland_trample")) {
             if (event.getAction() == Action.PHYSICAL) {
-                if (Objects.requireNonNull(event.getClickedBlock()).getType() == Material.FARMLAND) {
+                if (Objects.requireNonNull(event.getClickedBlock()).getType() == XMaterial.FARMLAND.parseMaterial()) {
                     event.setCancelled(true);
                 }
             }
@@ -90,7 +90,7 @@ public class SettingsListener implements Listener {
     @EventHandler
     public void onDragonEggTeleport(BlockFromToEvent event) {
         if (main.getConfig().getBoolean("settings.disable_dragon_egg_teleport")) {
-            if (event.getBlock().getType() == Material.DRAGON_EGG) {
+            if (event.getBlock().getType() == XMaterial.DRAGON_EGG.parseMaterial()) {
                 event.setCancelled(true);
             }
         }

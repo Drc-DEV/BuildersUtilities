@@ -10,11 +10,8 @@ public class ArmorColorCommand implements CommandExecutor {
 
     @Override
     public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
-        if (sender instanceof Player) {
-            Player player = (Player) sender;
-
-            player.openInventory(ArmorColorInventory.generate());
-        }
+        if (sender instanceof Player)
+            ((Player) sender).openInventory(ArmorColorInventory.generate());
         return true;
     }
 }

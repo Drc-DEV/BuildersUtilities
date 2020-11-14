@@ -1,5 +1,6 @@
 package xyz.tehbrian.buildersutilities.util;
 
+import com.cryptomorin.xseries.XMaterial;
 import org.bukkit.DyeColor;
 import org.bukkit.Material;
 import org.bukkit.block.banner.Pattern;
@@ -38,37 +39,37 @@ public class BannerUtils {
         switch (dyeColor) {
             default:
             case WHITE:
-                return Material.WHITE_BANNER;
+                return XMaterial.WHITE_BANNER.parseMaterial();
             case ORANGE:
-                return Material.ORANGE_BANNER;
+                return XMaterial.ORANGE_BANNER.parseMaterial();
             case MAGENTA:
-                return Material.MAGENTA_BANNER;
+                return XMaterial.MAGENTA_BANNER.parseMaterial();
             case LIGHT_BLUE:
-                return Material.LIGHT_BLUE_BANNER;
+                return XMaterial.LIGHT_BLUE_BANNER.parseMaterial();
             case YELLOW:
-                return Material.YELLOW_BANNER;
+                return XMaterial.YELLOW_BANNER.parseMaterial();
             case LIME:
-                return Material.LIME_BANNER;
+                return XMaterial.LIME_BANNER.parseMaterial();
             case PINK:
-                return Material.PINK_BANNER;
+                return XMaterial.PINK_BANNER.parseMaterial();
             case GRAY:
-                return Material.GRAY_BANNER;
+                return XMaterial.GRAY_BANNER.parseMaterial();
             case LIGHT_GRAY:
-                return Material.LIGHT_GRAY_BANNER;
+                return XMaterial.LIGHT_GRAY_BANNER.parseMaterial();
             case CYAN:
-                return Material.CYAN_BANNER;
+                return XMaterial.CYAN_BANNER.parseMaterial();
             case PURPLE:
-                return Material.PURPLE_BANNER;
+                return XMaterial.PURPLE_BANNER.parseMaterial();
             case BLUE:
-                return Material.BLUE_BANNER;
+                return XMaterial.BLUE_BANNER.parseMaterial();
             case BROWN:
-                return Material.BROWN_BANNER;
+                return XMaterial.BROWN_BANNER.parseMaterial();
             case GREEN:
-                return Material.GREEN_BANNER;
+                return XMaterial.GREEN_BANNER.parseMaterial();
             case RED:
-                return Material.RED_BANNER;
+                return XMaterial.RED_BANNER.parseMaterial();
             case BLACK:
-                return Material.BLACK_BANNER;
+                return XMaterial.BLACK_BANNER.parseMaterial();
         }
     }
 
