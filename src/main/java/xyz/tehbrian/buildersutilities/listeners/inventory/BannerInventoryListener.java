@@ -25,7 +25,8 @@ public class BannerInventoryListener implements Listener {
     public void onBaseInventoryClick(InventoryClickEvent event) {
         if (!Objects.equals(event.getClickedInventory(), event.getView().getTopInventory())) return;
 
-        if (!event.getView().getTitle().equals(MessageUtils.getMessage("messages.inventories.banner.base_inventory_name"))) return;
+        if (!event.getView().getTitle().equals(MessageUtils.getMessage("messages.inventories.banner.base_inventory_name")))
+            return;
         if (!(event.getWhoClicked() instanceof Player)) return;
         Player player = (Player) event.getWhoClicked();
 
@@ -50,7 +51,8 @@ public class BannerInventoryListener implements Listener {
     public void onColorInventoryClick(InventoryClickEvent event) {
         if (!Objects.equals(event.getClickedInventory(), event.getView().getTopInventory())) return;
 
-        if (!event.getView().getTitle().equals(MessageUtils.getMessage("messages.inventories.banner.color_inventory_name"))) return;
+        if (!event.getView().getTitle().equals(MessageUtils.getMessage("messages.inventories.banner.color_inventory_name")))
+            return;
         if (!(event.getWhoClicked() instanceof Player)) return;
         Player player = (Player) event.getWhoClicked();
 
@@ -83,7 +85,8 @@ public class BannerInventoryListener implements Listener {
     public void onPatternInventoryClick(InventoryClickEvent event) {
         if (!Objects.equals(event.getClickedInventory(), event.getView().getTopInventory())) return;
 
-        if (!event.getView().getTitle().equals(MessageUtils.getMessage("messages.inventories.banner.pattern_inventory_name"))) return;
+        if (!event.getView().getTitle().equals(MessageUtils.getMessage("messages.inventories.banner.pattern_inventory_name")))
+            return;
         if (!(event.getWhoClicked() instanceof Player)) return;
         Player player = (Player) event.getWhoClicked();
 

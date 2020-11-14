@@ -6,79 +6,67 @@
 
     <groupId>xyz.tehbrian</groupId>
     <artifactId>buildersutilities</artifactId>
-    <!-- Version is used in plugin.yml -->
-    <version>1.2.0</version>
+    <version>1.3.0</version>
     <packaging>jar</packaging>
-
-    <!-- Name, Description, and URL are used in plugin.yml -->
     <name>BuildersUtilities</name>
     <description>A lot of tiny features that help builders do their thing.</description>
     <url>https://github.com/ItsTehBrian/BuildersUtilities</url>
 
-    <developers>
-        <developer>
-            <name>TehBrian</name>
-            <url>https://tehbrian.xyz</url>
-        </developer>
-        <developer>
-            <name>Arcaniax</name>
-            <url>https://patreon.com/arcaniax</url>
-        </developer>
-    </developers>
-
     <properties>
-        <!--  Author, and MainClass are used in plugin.yml -->
-        <author>TehBrian</author>
-        <mainClass>xyz.tehbrian.buildersutilities.BuildersUtilities</mainClass>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <maven.compiler.target>1.8</maven.compiler.target>
-        <maven.compiler.source>1.8</maven.compiler.source>
     </properties>
 
-    <repositories>
-        <repository>
-            <id>spigot-repo</id>
-            <url>https://hub.spigotmc.org/nexus/content/repositories/snapshots/</url>
-        </repository>
-    </repositories>
-
-    <dependencies>
-        <dependency>
-            <groupId>org.spigotmc</groupId>
-            <artifactId>spigot-api</artifactId>
-            <version>1.15.2-R0.1-SNAPSHOT</version>
-            <scope>provided</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.bukkit</groupId>
-            <artifactId>craftbukkit</artifactId>
-            <version>1.15.2-R0.1-SNAPSHOT</version>
-            <scope>provided</scope>
-        </dependency>
-    </dependencies>
-
     <build>
-        <finalName>${project.name}-${project.version}</finalName>
-        <sourceDirectory>src/main/java</sourceDirectory>
+        <finalName>${project.name}_v${project.version}</finalName>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>8</source>
+                    <target>8</target>
+                </configuration>
+            </plugin>
+        </plugins>
         <defaultGoal>clean install</defaultGoal>
         <resources>
             <resource>
                 <directory>src/main/resources</directory>
-                <!-- Filtering replaces things like ${version} to the version in the POM.
-                We use that for plugin.yml to reduce redundancy, having only to update the POM. -->
                 <filtering>true</filtering>
-                <includes>
-                    <include>plugin.yml</include>
-                </includes>
-            </resource>
-            <resource>
-                <directory>src/main/resources</directory>
-                <!-- But filtering could mess up other things, so disable it for everything else. -->
-                <filtering>false</filtering>
-                <excludes>
-                    <exclude>**/*.java</exclude>
-                </excludes>
             </resource>
         </resources>
     </build>
+
+    <repositories>
+        <!-- CodeMC repository -->
+        <repository>
+            <id>nms-repo</id>
+            <url>https://repo.codemc.org/repository/nms/</url>
+        </repository>
+        <repository>
+            <id>codemc-repo</id>
+            <url>https://repo.codemc.org/repository/maven-releases/</url>
+        </repository>
+    </repositories>
+
+    <dependencies>
+        <!--|/\/\/\/\|  LIBRARIES  |/\/\/\/\|-->
+        <!-- XSeries https://github.com/CryptoMorin/XSeries -->
+        <dependency>
+            <groupId>com.github.cryptomorin</groupId>
+            <artifactId>XSeries</artifactId>
+            <version>7.6.0</version>
+            <scope>compile</scope>
+        </dependency>
+
+        <!--|/\/\/\/\|  DEPENDENCIES  |/\/\/\/\|-->
+        <!-- SpigotMC -->
+        <dependency>
+            <groupId>org.spigotmc</groupId>
+            <artifactId>spigot</artifactId>
+            <version>1.16.4-R0.1-SNAPSHOT</version>
+            <scope>provided</scope>
+        </dependency>
+    </dependencies>
+
 </project>

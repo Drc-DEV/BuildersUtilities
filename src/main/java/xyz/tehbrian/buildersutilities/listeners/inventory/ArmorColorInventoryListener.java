@@ -22,7 +22,8 @@ public class ArmorColorInventoryListener implements Listener {
     public void onInventoryClick(InventoryClickEvent event) {
         if (!Objects.equals(event.getClickedInventory(), event.getView().getTopInventory())) return;
 
-        if (!event.getView().getTitle().equals(MessageUtils.getMessage("messages.inventories.armor_color.inventory_name"))) return;
+        if (!event.getView().getTitle().equals(MessageUtils.getMessage("messages.inventories.armor_color.inventory_name")))
+            return;
         if (!(event.getWhoClicked() instanceof Player)) return;
         Player player = (Player) event.getWhoClicked();
 
